@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Web Client</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  </head>
+  <body>
+    <div id="messageContainer">
+      <input id="message" value="Hello">
+      <button onclick="send_message();">Enter Message</button>
+    </div>
+  </body>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>
+    const socket = io();
+    function send_message() {
+      const message = document.getElementById('message').value;
+      socket.send(message)
+    }
+    socket.on('connect', function(data) {
+      console.log('connect');
+    });
+    socket.on('message', function(message){
+      console.log('Message : '+message);
+    });
+  </script>
+</html>
