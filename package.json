@@ -1,32 +1,35 @@
 {
-  "main": "node_modules/expo/AppEntry.js",
+  "name": "Chatley",
+  "version": "0.0.1",
+  "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "eject": "expo eject",
+    "start": "node node_modules/react-native/local-cli/cli.js start",
     "server": "nodemon server/index.js"
   },
-  "author": "Tim Lin",
-  "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
-    "expo": "^31.0.2",
     "express": "^4.16.4",
-    "open": "0.0.5",
+    "lodash": "^4.17.11",
     "path": "^0.12.7",
-    "react": "16.5.0",
-    "react-native": "https://github.com/expo/react-native/archive/sdk-31.0.0.tar.gz",
+    "react": "16.6.1",
+    "react-native": "0.57.7",
+    "react-native-webrtc": "^1.67.1",
     "socket.io": "^2.2.0"
   },
   "devDependencies": {
     "babel-eslint": "^10.0.1",
+    "babel-jest": "23.6.0",
     "babel-preset-expo": "^5.0.0",
     "eslint": "^5.9.0",
     "eslint-config-airbnb": "^17.1.0",
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
-    "eslint-plugin-react": "^7.11.1"
+    "eslint-plugin-react": "^7.11.1",
+    "jest": "23.6.0",
+    "metro-react-native-babel-preset": "0.50.0",
+    "react-test-renderer": "16.6.1"
   },
-  "private": true
+  "jest": {
+    "preset": "react-native"
+  }
 }
